@@ -13,7 +13,7 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-
+    file_ignore_patterns = { "node_modules"},
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
@@ -29,7 +29,7 @@ telescope.setup {
 
         ["<CR>"] = actions.select_default,
         ["<C-x>"] = actions.select_horizontal,
-       ["<C-v>"] = actions.select_vertical,
+        ["<C-v>"] = actions.select_vertical,
         ["<C-t>"] = actions.select_tab,
 
         ["<C-u>"] = actions.preview_scrolling_up,

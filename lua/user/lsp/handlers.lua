@@ -2,8 +2,7 @@ local M = {}
 
 -- TODO: backfill this to template
 M.setup = function()
-  local signs = {
-    { name = "DiagnosticSignError", text = "" },
+  local signs = { { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
     { name = "DiagnosticSignHint", text = "" },
     { name = "DiagnosticSignInfo", text = "" },
@@ -78,7 +77,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n" , "gl" , "<cmd> Lspsaga show_line_diagnostics<cr>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>:Lspsaga diagnostic_jump_next<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<silent>gh", "<cmd>:Lspsaga lsp_finder<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gh", "<cmd>:Lspsaga lsp_finder<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 end
 
