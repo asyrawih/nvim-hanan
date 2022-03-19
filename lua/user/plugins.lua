@@ -85,6 +85,7 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
   -- Golang
   use 'ray-x/go.nvim'
+  use  {"rcarriga/nvim-dap-ui" , requires = "mfussenegger/nvim-dap"}
 
  -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -99,7 +100,12 @@ return packer.startup(function(use)
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", }
-  
+
+
+  -- Markdown Preview
+  use {"ellisonleao/glow.nvim"}
+
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

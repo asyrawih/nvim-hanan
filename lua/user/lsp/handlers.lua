@@ -1,3 +1,4 @@
+local sumneko_lua = require "user.lsp.settings.sumneko_lua"
 local M = {}
 
 -- TODO: backfill this to template
@@ -67,14 +68,18 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>:Lspsaga hover_doc <CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-  -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1) <CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1) <CR>", opts)
+
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gs", "<cmd>:Lspsaga signature_help <CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>:Lspsaga code_action<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "v", "<leader>ca", "<cmd>:Lspsaga range_code_action<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n" , "gl" , "<cmd> Lspsaga show_line_diagnostics<cr>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n" , "gl" , "<cmd>:Lspsaga show_line_diagnostics<cr>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>:Lspsaga diagnostic_jump_next<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gh", "<cmd>:Lspsaga lsp_finder<CR>", opts)
@@ -82,7 +87,6 @@ local function lsp_keymaps(bufnr)
 end
 
 M.on_attach = function(client, bufnr)
-  
   if client.name == "gopls" then
     client.resolved_capabilities.document_formatting = false
   end
@@ -90,6 +94,7 @@ M.on_attach = function(client, bufnr)
   if client.name == "tsserver" then
       client.resolved_capabilities.document_formatting = false
   end
+
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end

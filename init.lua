@@ -14,9 +14,10 @@ require "user.lualine"
 require "user.blankline"
 require "user.resize"
 require "user.twin"
-require "user.toggleterm"
 require "user.saga"
 require "user.golang"
+require "user.toggleterm"
+require "user.dap"
 
 
 
