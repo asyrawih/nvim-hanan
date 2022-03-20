@@ -23,8 +23,8 @@ vim.opt.undofile = true                                          -- enable persi
 vim.opt.updatetime = 300                                         -- faster completion (4000ms default)
 vim.opt.writebackup = false                                      -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 vim.opt.expandtab = true                                         -- convert tabs to spaces
-vim.opt.shiftwidth = 4                                           -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 4                                              -- insert 2 spaces for a tab
+vim.opt.shiftwidth = 3                                           -- the number of spaces inserted for each indentation
+vim.opt.tabstop = 3                                              -- insert 2 spaces for a tab
 vim.opt.cursorline = true                                        -- highlight the current line
 vim.opt.number = true                                            -- set numbered lines
 vim.opt.relativenumber = true                                    -- set relative numbered lines
@@ -33,7 +33,7 @@ vim.opt.signcolumn = "yes"                                       -- always show 
 vim.opt.wrap = false                                             -- display lines as one long line
 vim.opt.scrolloff = 8                                            -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.guifont = "FiraCode Bold Italic Font:h18"                 -- the font used in graphical neovim applications
+vim.opt.guifont = "FiraCode Nerd Mono"                           -- the font used in graphical neovim applications
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"

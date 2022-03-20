@@ -30,7 +30,7 @@ require'nvim-tree'.setup {
   update_cwd          = false,
   update_to_buf_dir   = {
     enable = true,
-    auto_open = false,
+    auto_open = true,
   },
   diagnostics = {
     enable = true,
@@ -42,8 +42,8 @@ require'nvim-tree'.setup {
     }
   },
   update_focused_file = {
-    enable      = false,
-    update_cwd  = false,
+    enable      = true,
+    update_cwd  = true,
     ignore_list = {}
   },
   system_open = {

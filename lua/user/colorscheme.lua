@@ -6,11 +6,3 @@ if not status_ok then
   return
 end
 
-
-vim.g.tokyonight_style = "storm"
-vim.g.tokyonight_italic_functions = true
-vim.g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" , "NvimTree" }
--- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.tokyonight_colors = { hint = "yellow", error = "#ff0000" }
-vim.g.tokyonight_lualine_bold = true
-

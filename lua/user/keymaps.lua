@@ -64,7 +64,7 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts) 
+keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 
 -- Telescope --
@@ -74,18 +74,17 @@ keymap("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", opts)
 
 -- Keymaps --
 keymap("n", "<leader><Tab>", ":NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting() <cr>", opts)
 keymap("n", "ss", ":noh<cr>", opts)
 
---- Buffer -- 
+--- Buffer --
 keymap("n" , "<S-w>", ":Bdelete<cr>" , opts)
 
--- Window -- 
+-- Window --
 keymap("n" , "<leader>vs" , ":vsplit<cr>" , opts)
 keymap("n" , "<leader>sh",  ":split<cr>" , opts)
 
 
---Focus Mode -- 
+--Focus Mode --
 keymap("n" , "<leader>te" , ":TwilightEnable<cr>" , opts)
 keymap("n" , "<leader>td" , ":TwilightDisable<cr>" , opts)
 

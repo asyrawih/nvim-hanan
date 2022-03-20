@@ -18,6 +18,7 @@ require "user.saga"
 require "user.golang"
 require "user.toggleterm"
 require "user.dap"
+require "user.catppuccin"
 
 
 
@@ -26,5 +27,5 @@ local filetypes = {
   'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'
 }
 require('nvim-ts-autotag').setup({
-  filetypes = filetypes 
+  filetypes = filetypes
 })
