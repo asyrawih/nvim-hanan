@@ -1,5 +1,4 @@
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
 
 -- Shorten function name
@@ -77,7 +76,7 @@ keymap("n", "<leader><Tab>", ":NvimTreeToggle<cr>", opts)
 keymap("n", "ss", ":noh<cr>", opts)
 
 --- Buffer --
-keymap("n" , "<S-w>", ":Bdelete<cr>" , opts)
+keymap("n" , "<S-w>", ":Bdelete!<cr>" , opts)
 
 -- Window --
 keymap("n" , "<leader>vs" , ":vsplit<cr>" , opts)
@@ -91,4 +90,8 @@ keymap("n" , "<leader>td" , ":TwilightDisable<cr>" , opts)
 --Comment--
 --:CommentToggle<cr>
 keymap('v' , "<leader>/" , ":CommentToggle<cr>" , opts)
+
+keymap("n" , "<leader>dp" , "<cmd>:GoBreakToggle <cr>" , opts)
+keymap("n" , "<leader>db" , "<cmd>:GoDebug<cr>" , opts)
+
 

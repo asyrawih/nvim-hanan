@@ -17,7 +17,9 @@ require "user.twin"
 require "user.saga"
 require "user.golang"
 require "user.toggleterm"
+require "user.dap-ui"
 require "user.dap"
+require "user.dap-virtual-text"
 require "user.catppuccin"
 
 

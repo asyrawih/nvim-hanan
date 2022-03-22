@@ -48,6 +48,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "folke/twilight.nvim"
   use "akinsho/toggleterm.nvim"
+  use "ray-x/guihua.lua"
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {'kyazdani42/nvim-web-devicons'},
@@ -88,7 +89,9 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
   -- Golang
   use 'ray-x/go.nvim'
+  use "theHamsta/nvim-dap-virtual-text"
   use {"rcarriga/nvim-dap-ui", requires = "mfussenegger/nvim-dap"}
+  use 'mfussenegger/nvim-dap'
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
