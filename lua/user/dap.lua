@@ -10,5 +10,14 @@ dap.adapters.php = {
 }
 
 dap.configurations.php = {
-  {type = 'php', request = 'launch', name = 'Listen for Xdebug', port = 9000}
+  {
+    type = 'php',
+    request = 'launch',
+    name = 'Listen for xdebug',
+    hostname = '0.0.0.0',
+    port = 9003,
+    stopOnEntry = false,
+    serverSourceRoot = '/Users/hanan/projects/salazar/loyalty-system',
+    localSourceRoot = '/Users/hanan/projects/salazar/loyalty-system'
+  }
 }
