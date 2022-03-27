@@ -21,6 +21,7 @@ require "user.dap-ui"
 require "user.dap"
 require "user.dap-virtual-text"
 require "user.catppuccin"
+require "user.cmdline"
 
 
 

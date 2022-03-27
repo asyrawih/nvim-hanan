@@ -110,5 +110,6 @@ return packer.startup(function(use)
   -- Markdown Preview
   use {"ellisonleao/glow.nvim"}
 
+
   if PACKER_BOOTSTRAP then require("packer").sync() end
 end)
