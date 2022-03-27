@@ -23,7 +23,7 @@ require "user.dap-virtual-text"
 require "user.catppuccin"
 require "user.cmdline"
 
-
+-- Change Color On Empty Folder 
 vim.cmd"highlight NvimTreeEmptyFolderName ctermbg=6 guifg=#B48EAD"
 
 -- AutoClose Tag --
