@@ -36,7 +36,7 @@ vim.opt.guifont = "FiraCode Nerd Mono"                           -- the font use
 
 vim.opt.expandtab = true
 vim.opt.shortmess:append "c"
-
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd "set termguicolors"
+vim.cmd "highlight NvimTreeEmptyFolderName ctermbg=6 gui=bold guifg=#B48EAD"

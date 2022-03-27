@@ -24,6 +24,7 @@ require "user.catppuccin"
 require "user.cmdline"
 
 
+vim.cmd"highlight NvimTreeEmptyFolderName ctermbg=6 guifg=#B48EAD"
 
 -- AutoClose Tag --
 local filetypes = {

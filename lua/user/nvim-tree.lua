@@ -18,7 +18,6 @@ vim.g.nvim_tree_icons = {
     symlink = "",
   },
 }
-
 require'nvim-tree'.setup {
   disable_netrw       = true,
   hijack_netrw        = true,
