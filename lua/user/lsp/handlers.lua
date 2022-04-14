@@ -11,7 +11,7 @@ M.setup = function()
 
   local config = {
     -- disable virtual text
-    virtual_text = true,
+    virtual_text = false,
     -- show signs
     signs = {active = signs},
     update_in_insert = true,
@@ -29,8 +29,7 @@ M.setup = function()
 
   vim.diagnostic.config(config)
 
-  vim.lsp.handlers["textDocument/hover"] = vim.lsp
-                                               .with(vim.lsp.handlers.hover, {border = "rounded"})
+  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = "rounded"})
 
   vim.lsp.handlers["textDocument/signatureHelp"] =
       vim.lsp.with(vim.lsp.handlers.signature_help, {border = "rounded"})
@@ -85,7 +84,9 @@ M.on_attach = function(client, bufnr)
   if client.name == "vuels" then client.resolved_capabilities.document_formatting = false end
 
   lsp_keymaps(bufnr)
+
   lsp_highlight_document(client)
+
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

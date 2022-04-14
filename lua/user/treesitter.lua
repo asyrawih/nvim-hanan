@@ -1,5 +1,7 @@
 local configs = require("nvim-treesitter.configs")
-local filetypes = {'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'}
+local filetypes = {
+  'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'smarty'
+}
 
 configs.setup {
   rainbow = {
@@ -27,6 +29,6 @@ configs.setup {
 vim.lsp.handlers['textDocument/publishDiagnostics'] =
     vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
       underline = true,
-      virtual_text = {spacing = 5, severity_limit = 'Warning'},
+      virtual_text = {spacing = 2, severity_limit = 'Warning'},
       update_in_insert = true
     })

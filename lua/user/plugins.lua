@@ -56,7 +56,7 @@ return packer.startup(function(use)
       require'nvim-tree'.setup {}
     end
   }
-  use "catppuccin/nvim"
+
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -81,13 +81,13 @@ return packer.startup(function(use)
   -- Put this at the end after all plugins
   --
   -- ColorSchema
-  use 'tiagovla/tokyodark.nvim'
-  use 'folke/tokyonight.nvim'
   use 'shaunsingh/nord.nvim'
+  use 'kaicataldo/material.vim'
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
   -- Golang
   use 'ray-x/go.nvim'
   use "theHamsta/nvim-dap-virtual-text"
@@ -102,15 +102,14 @@ return packer.startup(function(use)
   use {'tami5/lspsaga.nvim'}
 
   -- Telescope
+
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
-
   -- Treesitter
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 
   -- Markdown Preview
   use {"ellisonleao/glow.nvim"}
-
 
   if PACKER_BOOTSTRAP then require("packer").sync() end
 end)

@@ -1,3 +1,4 @@
+require('nvim-ts-autotag').setup()
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -20,16 +21,5 @@ require "user.toggleterm"
 require "user.dap-ui"
 require "user.dap"
 require "user.dap-virtual-text"
-require "user.catppuccin"
 require "user.cmdline"
 
--- Change Color On Empty Folder 
-vim.cmd"highlight NvimTreeEmptyFolderName ctermbg=6 guifg=#B48EAD"
-
--- AutoClose Tag --
-local filetypes = {
-  'html', 'javascript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue'
-}
-require('nvim-ts-autotag').setup({
-  filetypes = filetypes
-})

@@ -8,3 +8,4 @@ require "user.lsp.handlers".setup()
 require "user.lsp.null-ls"
 require "user.lsp.settings.jsonls"
 require "user.lsp.settings.sumneko_lua"
+require "user.lsp.settings.php"
