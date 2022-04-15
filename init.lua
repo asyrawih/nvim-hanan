@@ -22,4 +22,5 @@ require "user.dap-ui"
 require "user.dap"
 require "user.dap-virtual-text"
 require "user.cmdline"
+require "user.diffview"
 

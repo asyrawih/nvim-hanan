@@ -71,7 +71,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>:Lspsaga diagnostic_jump_next<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>",
                               opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gh", "<cmd>:Lspsaga lsp_finder<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lf", "<cmd>:Lspsaga lsp_finder<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>fm",
                               "<ESC><cmd>lua vim.lsp.buf.formatting_sync()<CR>", opts)
 end

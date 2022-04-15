@@ -12,7 +12,7 @@ configs.setup {
     -- termcolors = {} -- table of colour name strings
   },
   autotag = {enable = true, filetypes = filetypes},
-  ensure_installed = "maintained",
+  ensure_installed = "all",
   sync_install = false,
   ignore_install = {""}, -- List of parsers to ignore installing
   autopairs = {enable = true},
