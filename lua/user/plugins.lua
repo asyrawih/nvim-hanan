@@ -33,6 +33,7 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
+  use 'edolphin-ydf/goimpl.nvim'
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
@@ -64,11 +65,7 @@ return packer.startup(function(use)
     end
   }
   use 'nvim-lualine/lualine.nvim'
-  use {
-    "terrortylor/nvim-comment",
-    cmd = "CommentToggle",
-    config = "require('nvim_comment').setup()"
-  }
+
   -- CMP --
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -110,6 +107,7 @@ return packer.startup(function(use)
 
   -- Markdown Preview
   use {"ellisonleao/glow.nvim"}
+  use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
 
   if PACKER_BOOTSTRAP then require("packer").sync() end
 end)
